@@ -3,7 +3,7 @@ This module contains (Recurrent) Convolutional Neural Networks - Classifiers
 
 It can be used to classify one-class-problems like epileptic seizure prediction using (raw) EEG data.
 Conventional CNN as well as R-CNN are implemented.
-Therefor the tied_layers class by Nico Hoffmann (https://github.com/nih23/UKDDeepLearning/tree/master/FunctionalImaging) was used to implement a Recurrent ConvLayer
+Therefore the tied_layers class by Nico Hoffmann (https://github.com/nih23/UKDDeepLearning/tree/master/FunctionalImaging) was used to implement a Recurrent ConvLayer
 of the size 4 as in https://doi.org/10.1109/CVPR.2015.7298958
 
 ---------------------------------------------------------------------------------------
