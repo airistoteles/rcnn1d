@@ -1,9 +1,9 @@
 # rcnn1d
 Recurrent Convolutional Neural Network Class - (almost) scikit-learn API
 
-This module contains one-dimensional (Recurrent) Convolutional Neural Networks - Classifiers
+This module contains one-dimensional (Recurrent) Convolutional Neural Networks - Classifiers.
 
-One-dimensional as in Keras' definition of Conv1D. Kernelsize is always (num_channels, kernel_width)
+One-dimensional as in Keras' definition of Conv1D. Kernelsize is always (num_channels, kernel_width).
 
     -> Convolution only in one direction
 
