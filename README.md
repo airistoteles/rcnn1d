@@ -10,6 +10,16 @@ was used to implement a Recurrent ConvLayer of the size 4 as in https://doi.org/
 
 See code (rcnn.py) for further documentation
 
+# Install needed libraries
+... the fast way. If you build Tensorflow from source it's much faster.
+
+```
+pip install numpy
+pip install tensorflow 
+pip install keras
+pip install scikit-learn
+```
+
 # Example
 ```python
 import rcnn
