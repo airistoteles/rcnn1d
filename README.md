@@ -10,7 +10,7 @@ was used to implement a Recurrent ConvLayer of the size 4 as in https://doi.org/
 
 See code (rcnn.py) for further documentation
 
-# Usage
+# Example
 ```python
 import rcnn
 import numpy as np
