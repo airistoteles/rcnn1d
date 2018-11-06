@@ -34,10 +34,24 @@ y_val = np.zeros([10,])
 y_val[0] = 1
 
 # init model
-model = rcnn.RecCnnRCNN_generic(recurrent=True, num_features=8, conv_depth=8, save_model=False) # init model
+model = rcnn.RecCnnRCNN_generic(recurrent=True, num_features=8, conv_depth=8, save_model=False)
 # fit model for 2 epochs
 model.fit(x, y, x_val, y_val, epochs=2) 
 
 # evaluate model using Area Under Curve (AUC)
 print("AUC=" + str(model.score(x_val, y_val)))
+```
+Results in:
+```
+Using TensorFlow backend.
+
+Train on 10 samples, validate on 10 samples
+
+Epoch 1/2
+10/10 [==============================] - 15s 2s/step - loss: 1.2516 - binary_accuracy: 0.8000 - val_loss: 0.7368 - val_binary_accuracy: 0.2000
+
+Epoch 2/2
+10/10 [==============================] - 0s 5ms/step - loss: 1.1428 - binary_accuracy: 0.8000 - val_loss: 0.6593 - val_binary_accuracy: 0.6000
+
+AUC=0.7777777777777778
 ```
