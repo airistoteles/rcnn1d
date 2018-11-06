@@ -1,7 +1,12 @@
 # rcnn1d
 Recurrent Convolutional Neural Network Class - (almost) scikit-learn API
 
-This module contains (Recurrent) Convolutional Neural Networks - Classifiers
+This module contains one-dimensional (Recurrent) Convolutional Neural Networks - Classifiers
+
+One-dimensional as in Keras' definition of Conv1D. Kernelsize is always (num_channels, kernel_width)
+    -> Convolution only in one direction
+    -> channel order doesn't matter
+    -> but because of this channel order information is lost
 
 It can be used to classify one-class-problems like epileptic seizure prediction using (raw) EEG data.
 Conventional CNN as well as R-CNN are implemented.
