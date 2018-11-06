@@ -12,9 +12,16 @@ See code (rcnn.py) for further documentation
 
 # Usage
 ```python
+import rcnn
+import numpy as np
 
-# your data goes here
-x, y, x_val, y_val = … 
+# dummy EEG dataset: 10 samples, 16 channels, 3000 EEG data samples per sample
+x = np.random.random([10, 16, 3000])
+y = np.zeros([10,])
+y[0] = 1
+x_val = np.random.random([10, 16, 3000])
+y_val = np.zeros([10,])
+y_val[0] = 1
 
 # init model
 model = rcnn.RecCnnRCNN_generic(recurrent=True, num_features=8, conv_depth=8, save_model=False) # init model

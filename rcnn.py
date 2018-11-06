@@ -131,7 +131,7 @@ class _RecCnn():
             self.model.fit(x=X, y=Y,
                            batch_size=64,
                            epochs=epochs,
-                           verbose=0,
+                           verbose=1,
                            class_weight=class_weight,
                            shuffle=True,
                            validation_data=(X_val, Y_val),
@@ -140,7 +140,7 @@ class _RecCnn():
             self.model.fit(x=X, y=Y,
                            batch_size=64,
                            epochs=epochs,
-                           verbose=0,
+                           verbose=1,
                            class_weight=class_weight,
                            shuffle=True,
                            validation_data=(X_val, Y_val))
@@ -168,7 +168,7 @@ class _RecCnn():
             The predicted classes.
         """
 
-        Y = self.predict(X)
+        Y = self.model.predict(X)
         for i in range(len(Y)):
             if Y[i] < threshold:
                 Y[i] = 0
@@ -218,7 +218,7 @@ class _RecCnn():
         :returns: score : (float) AUC of self.predict(X) wrt. y.
         """
         Y_pred = self.predict(X)
-        fpr, tpr, _ = roc_curve(Y_val, Y_pred)
+        fpr, tpr, _ = roc_curve(Y, Y_pred)
         roc_auc = auc(fpr, tpr)
 
         return roc_auc
